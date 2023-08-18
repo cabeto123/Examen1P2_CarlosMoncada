@@ -9,6 +9,7 @@ package examen1p2_carlosmoncada;
  * @author calol
  */
 public abstract class Jugador {
+    String posicion;
     String nombre;
     int edad;
     String nacionalidad;
@@ -25,14 +26,7 @@ public abstract class Jugador {
     int regate;
     int disparo;
 
-    public Jugador(String nombre, int edad, String nacionalidad, String piehabil, Equipo equipo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.nacionalidad = nacionalidad;
-        this.piehabil = piehabil;
-        this.equipo = equipo;
-    }
-
+  
     public String getNombre() {
         return nombre;
     }

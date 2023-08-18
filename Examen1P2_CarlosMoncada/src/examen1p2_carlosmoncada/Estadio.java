@@ -54,10 +54,12 @@ public class Estadio {
         this.equipo = equipo;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Nombre= " + nombre + "Ciudad= " + ciudad + "Capacidad= " + capacidad + "Equipo= " + equipo ;
+    }*/
+    public String toString() {
+        return   nombre ;
     }
-    
     
 }

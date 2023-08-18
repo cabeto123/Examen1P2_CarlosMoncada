@@ -16,6 +16,9 @@ String pais;
 int ratingplantilla;
 ArrayList<Jugador> plantilla= new ArrayList<>();
 
+    public Equipo() {
+    }
+
     public Equipo(String nombre, String pais, int ratingplantilla) {
         this.nombre = nombre;
         this.pais = pais;
@@ -52,6 +55,14 @@ ArrayList<Jugador> plantilla= new ArrayList<>();
 
     public void setPlantilla(ArrayList<Jugador> plantilla) {
         this.plantilla = plantilla;
+    }
+    public void Calcularrating() {
+        int suma=0;
+        for (int i = 0; i < plantilla.size(); i++) {
+            suma+=plantilla.get(i).getRating();
+        }
+        suma/=plantilla.size();
+        this.ratingplantilla=suma;
     }
 
     @Override

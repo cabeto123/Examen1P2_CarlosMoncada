@@ -10,9 +10,14 @@ package examen1p2_carlosmoncada;
  */
 public class Defensa extends  Jugador{
 
-    public Defensa(String nombre, int edad, String nacionalidad, String piehabil, Equipo equipo) {
-        super(nombre, edad, nacionalidad, piehabil, equipo);
+    
+    public Defensa(   String nombre, int edad, String nacionalidad, String piehabil) {
+    this.edad=edad;
+      this.nacionalidad=nacionalidad;
+      this.nombre=nombre;
+      this.piehabil=piehabil;
     }
+
 
     public String getNombre() {
         return nombre;
