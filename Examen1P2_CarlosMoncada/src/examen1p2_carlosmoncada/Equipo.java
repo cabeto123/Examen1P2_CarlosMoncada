@@ -19,10 +19,13 @@ ArrayList<Jugador> plantilla= new ArrayList<>();
     public Equipo() {
     }
 
-    public Equipo(String nombre, String pais, ArrayList<Jugador> plantilla) {
+    public Equipo(String nombre, String pais) {
         this.nombre = nombre;
         this.pais = pais;
-        this.plantilla=plantilla;
+    }
+    public void agregardelantero(Delantero j){
+    plantilla.add(j);
+    
     }
 
     public String getNombre() {
