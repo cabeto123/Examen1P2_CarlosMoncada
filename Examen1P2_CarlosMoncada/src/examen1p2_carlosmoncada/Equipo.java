@@ -19,10 +19,10 @@ ArrayList<Jugador> plantilla= new ArrayList<>();
     public Equipo() {
     }
 
-    public Equipo(String nombre, String pais, int ratingplantilla) {
+    public Equipo(String nombre, String pais, ArrayList<Jugador> plantilla) {
         this.nombre = nombre;
         this.pais = pais;
-        this.ratingplantilla = ratingplantilla;
+        this.plantilla=plantilla;
     }
 
     public String getNombre() {
@@ -67,7 +67,7 @@ ArrayList<Jugador> plantilla= new ArrayList<>();
 
     @Override
     public String toString() {
-        return "Nombre= " + nombre + "Pais=" + pais + "Rating de plantilla= " + ratingplantilla + "Plantilla= " + plantilla ;
+        return nombre;
     }
 
 }

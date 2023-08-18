@@ -156,10 +156,18 @@ public abstract class Jugador {
     public abstract void ratingRegate();
     public abstract void ratingDisparo();
     public abstract void Calcularrating();
+
+    public String getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(String posicion) {
+        this.posicion = posicion;
+    }
     
     @Override
     public String toString() {
-        return "Nombre= " + nombre + " Edad= " + edad + "Nacionalidad= " + nacionalidad + "Pie habil= " + piehabil + "Rating= " + rating + "Equipo=" + equipo + "Agarre=" + agarre + "Lanzamiento= " + lanzamiento + "Fisico= " + fisico + "Ritmo=" + ritmo + "Entrada=" + entrada + "Vision= " + vision + "Passing= " + passing + "Regate= " + regate + "Disparo= " + disparo ;
+        return nombre ;
     }
     
 }

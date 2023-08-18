@@ -9,7 +9,9 @@ package examen1p2_carlosmoncada;
  * @author calol
  */
 public class Mediocampista extends Jugador {
-
+    public Mediocampista(){
+    
+    }
     
     public Mediocampista(   String nombre, int edad, String nacionalidad, String piehabil) {
     this.edad=edad;

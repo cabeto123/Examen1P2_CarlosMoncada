@@ -9,7 +9,9 @@ package examen1p2_carlosmoncada;
  * @author calol
  */
 public class Portero extends Jugador {
-
+    public Portero(){
+    
+    }
     public Portero(   String nombre, int edad, String nacionalidad, String piehabil) {
     this.edad=edad;
       this.nacionalidad=nacionalidad;
