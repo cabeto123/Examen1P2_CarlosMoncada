@@ -13,11 +13,12 @@ public class Mediocampista extends Jugador {
     
     }
     
-    public Mediocampista(   String nombre, int edad, String nacionalidad, String piehabil) {
+    public Mediocampista(   String nombre, int edad, String nacionalidad, String piehabil,Equipo equipo) {
     this.edad=edad;
       this.nacionalidad=nacionalidad;
       this.nombre=nombre;
       this.piehabil=piehabil;
+      this.equipo=equipo;
     }
 
 

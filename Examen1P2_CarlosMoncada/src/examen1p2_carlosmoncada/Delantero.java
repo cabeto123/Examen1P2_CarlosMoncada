@@ -10,15 +10,23 @@ package examen1p2_carlosmoncada;
  */
 public class Delantero extends Jugador {
 
-    public Delantero(){
-    }
-    public Delantero(   String nombre, int edad, String nacionalidad, String piehabil) {
-    this.edad=edad;
-      this.nacionalidad=nacionalidad;
-      this.nombre=nombre;
-      this.piehabil=piehabil;
+    public Delantero() {
     }
 
+    public Delantero(String nombre, int edad, String nacionalidad, String piehabil, Equipo equipo) {
+        this.edad = edad;
+        this.nacionalidad = nacionalidad;
+        this.nombre = nombre;
+        this.piehabil = piehabil;
+        this.equipo=equipo;
+    }
+    
+    public Delantero(String nombre, int edad, String nacionalidad, String piehabil) {
+        this.edad = edad;
+        this.nacionalidad = nacionalidad;
+        this.nombre = nombre;
+        this.piehabil = piehabil;
+    }
 
     @Override
     public void ratingAgarre() {

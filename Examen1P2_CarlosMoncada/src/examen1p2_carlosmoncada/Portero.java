@@ -12,11 +12,12 @@ public class Portero extends Jugador {
     public Portero(){
     
     }
-    public Portero(   String nombre, int edad, String nacionalidad, String piehabil) {
+    public Portero(   String nombre, int edad, String nacionalidad, String piehabil,Equipo equipo) {
     this.edad=edad;
       this.nacionalidad=nacionalidad;
       this.nombre=nombre;
       this.piehabil=piehabil;
+      this.equipo=equipo;
     }
 
      

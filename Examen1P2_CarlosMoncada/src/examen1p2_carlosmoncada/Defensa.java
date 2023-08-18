@@ -12,11 +12,12 @@ public class Defensa extends  Jugador{
 
     public Defensa(){
     }
-    public Defensa(   String nombre, int edad, String nacionalidad, String piehabil) {
+    public Defensa(   String nombre, int edad, String nacionalidad, String piehabil,Equipo equipo) {
     this.edad=edad;
       this.nacionalidad=nacionalidad;
       this.nombre=nombre;
       this.piehabil=piehabil;
+      this.equipo=equipo;
     }
 
 

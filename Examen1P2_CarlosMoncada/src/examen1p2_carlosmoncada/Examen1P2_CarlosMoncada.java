@@ -51,6 +51,8 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         cb_posicion = new javax.swing.JComboBox<>();
         edad = new javax.swing.JFormattedTextField();
+        cb_equipoagregarjgd = new javax.swing.JComboBox<>();
+        jLabel26 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -66,8 +68,6 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        cb_jugador = new javax.swing.JComboBox<>();
-        jLabel15 = new javax.swing.JLabel();
         nombre_equipo = new javax.swing.JTextField();
         pais_equipo = new javax.swing.JTextField();
         bt_agregarequipo = new javax.swing.JButton();
@@ -142,6 +142,8 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
 
         edad.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
 
+        jLabel26.setText("Equipo");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -166,12 +168,15 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
                                     .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel26))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cb_posicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nacionalidad, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
-                                    .addComponent(piehabil)))))
+                                    .addComponent(cb_equipoagregarjgd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cb_posicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(nacionalidad, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                                        .addComponent(piehabil))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(154, 154, 154)
                         .addComponent(btn_agregarjgd)))
@@ -202,7 +207,11 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(cb_posicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_equipoagregarjgd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(btn_agregarjgd)
                 .addContainerGap())
         );
@@ -288,7 +297,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(capacidad_estadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 58, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(ciudad_estadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -311,15 +320,6 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel14.setText("Pais");
-
-        cb_jugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cb_jugadorActionPerformed(evt);
-            }
-        });
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel15.setText("Jugador");
 
         pais_equipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -347,13 +347,11 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel15))
+                            .addComponent(jLabel14))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(nombre_equipo, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                            .addComponent(pais_equipo)
-                            .addComponent(cb_jugador, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(pais_equipo)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(179, 179, 179)
                         .addComponent(bt_agregarequipo)))
@@ -372,11 +370,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(pais_equipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cb_jugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
                 .addComponent(bt_agregarequipo)
                 .addGap(21, 21, 21))
         );
@@ -469,7 +463,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_posicionmodificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(btn_modifcar)
                 .addGap(27, 27, 27))
         );
@@ -553,7 +547,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_modificarequipoestadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel25))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(25, 25, 25))
         );
@@ -589,15 +583,16 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     private void btn_agregarjgdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_agregarjgdMouseClicked
         String posicion = (String) cb_posicion.getSelectedItem();
         if (posicion.equalsIgnoreCase("delantero")) {
-            jugadores.add(new Delantero(nombre.getText(), Integer.parseInt(edad.getText()), "delantero", piehabil.getText()));
+            
+            jugadores.add(new Delantero(nombre.getText(), Integer.parseInt(edad.getText()), "delantero", piehabil.getText(),(Equipo)cb_equipoagregarjgd.getSelectedItem()));
         } else if (posicion.equalsIgnoreCase("mediocampista")) {
 
-            jugadores.add(new Delantero(nombre.getText(), Integer.parseInt(edad.getText()), "mediocampista", piehabil.getText()));
+            jugadores.add(new Mediocampista(nombre.getText(), Integer.parseInt(edad.getText()), "mediocampista", piehabil.getText(),(Equipo)cb_equipoagregarjgd.getSelectedItem()));
         } else if (posicion.equalsIgnoreCase("defensa")) {
 
-            jugadores.add(new Delantero(nombre.getText(), Integer.parseInt(edad.getText()), "defensa", piehabil.getText()));
+           jugadores.add(new Defensa(nombre.getText(), Integer.parseInt(edad.getText()), "defensa", piehabil.getText(),(Equipo)cb_equipoagregarjgd.getSelectedItem()));
         } else if (posicion.equalsIgnoreCase("portero")) {
-            jugadores.add(new Delantero(nombre.getText(), Integer.parseInt(edad.getText()), "portero", piehabil.getText()));
+           jugadores.add(new Portero(nombre.getText(), Integer.parseInt(edad.getText()), "defensa", piehabil.getText(),(Equipo)cb_equipoagregarjgd.getSelectedItem()));
         }
         nombre.setText("");
         edad.setText("");
@@ -645,6 +640,17 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "No ha añadido jugadores no puede modificar");
         
         
+        }else if(tab.getSelectedIndex() == 0 && equipos.size()>0){
+        DefaultComboBoxModel e= (DefaultComboBoxModel)cb_equipoagregarjgd.getModel();
+            for (int i = 0; i < equipos.size(); i++) {
+                e.addElement(equipos.get(i));
+            }
+           cb_equipoagregarjgd.setModel(e);
+           
+        
+        }
+        if (tab.getSelectedIndex() == 0 && equipos.size()>0) {
+            JOptionPane.showMessageDialog(this, "Mi pana no hay equipos para agregar");
         }
         if (tab.getSelectedIndex() == 1&& equipos.size() > 0) {
             DefaultComboBoxModel equipo = (DefaultComboBoxModel) cb_equipos.getModel();
@@ -653,11 +659,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
             }
             cb_equipos.setModel(equipo);
         }else if(tab.getSelectedIndex() == 2&& jugadores.size() > 0){
-         DefaultComboBoxModel jgd = (DefaultComboBoxModel) cb_jugador.getModel();
-            for (int i = 0; i < jugadores.size(); i++) {
-                jgd.addElement(jugadores.get(i));
-            }
-            cb_jugador.setModel(jgd);
+         
         
         }else if(tab.getSelectedIndex() == 3&& jugadores.size() > 0){
             DefaultComboBoxModel modificar= (DefaultComboBoxModel) cb_modificarjgd.getModel();
@@ -683,27 +685,17 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pais_equipoActionPerformed
 
-    private void cb_jugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_jugadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_jugadorActionPerformed
-
     private void bt_agregarequipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarequipoMouseClicked
-        if (jugadores.size() == 0) {
+        
+        
 
-            ArrayList<Jugador> S = new ArrayList();
-            S.add((Jugador) cb_jugador.getSelectedItem());
-            equipos.add(new Equipo(nombre_equipo.getText(), pais_equipo.getText(), null));
-            nombre_equipo.setText("");
-            pais_equipo.setText("");
-        } else {
-
-            ArrayList<Jugador> S = new ArrayList();
-            S.add((Jugador) cb_jugador.getSelectedItem());
-            equipos.add(new Equipo(nombre_equipo.getText(), pais_equipo.getText(), S));
+        
+        
+            equipos.add(new Equipo(nombre_equipo.getText(), pais_equipo.getText(),null));
             nombre_equipo.setText("");
             pais_equipo.setText("");
 
-        }
+        
     }//GEN-LAST:event_bt_agregarequipoMouseClicked
 
     private void edad_modifcajgdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edad_modifcajgdActionPerformed
@@ -825,8 +817,8 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     private javax.swing.JButton btn_agregarjgd;
     private javax.swing.JButton btn_modifcar;
     private javax.swing.JFormattedTextField capacidad_estadio;
+    private javax.swing.JComboBox<String> cb_equipoagregarjgd;
     private javax.swing.JComboBox<String> cb_equipos;
-    private javax.swing.JComboBox<String> cb_jugador;
     private javax.swing.JComboBox<String> cb_modificarequipoestadio;
     private javax.swing.JComboBox<String> cb_modificarjgd;
     private javax.swing.JComboBox<String> cb_posicion;
@@ -842,7 +834,6 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -854,6 +845,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
