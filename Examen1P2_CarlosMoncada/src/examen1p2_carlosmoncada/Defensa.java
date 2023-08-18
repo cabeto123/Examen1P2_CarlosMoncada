@@ -8,29 +8,10 @@ package examen1p2_carlosmoncada;
  *
  * @author calol
  */
-public abstract class Jugador {
-    String nombre;
-    int edad;
-    String nacionalidad;
-    String piehabil;
-    int rating;
-    Equipo equipo;
-    int agarre;
-    int lanzamiento;
-    int fisico;
-    int ritmo;
-    int entrada;
-    int vision;
-    int passing;
-    int regate;
-    int disparo;
+public class Defensa extends  Jugador{
 
-    public Jugador(String nombre, int edad, String nacionalidad, String piehabil, Equipo equipo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.nacionalidad = nacionalidad;
-        this.piehabil = piehabil;
-        this.equipo = equipo;
+    public Defensa(String nombre, int edad, String nacionalidad, String piehabil, Equipo equipo) {
+        super(nombre, edad, nacionalidad, piehabil, equipo);
     }
 
     public String getNombre() {
@@ -152,20 +133,93 @@ public abstract class Jugador {
     public void setDisparo(int disparo) {
         this.disparo = disparo;
     }
-    public abstract   void ratingAgarre();
-    public abstract void ratingLanzamiento();
-    public abstract void ratingPassing();
-    public abstract void ratingFisico();
-    public abstract void ratingRitmo();
-    public abstract void ratingEntrada();
-    public abstract void ratingVision();
-    public abstract void ratingRegate();
-    public abstract void ratingDisparo();
-    public abstract void Calcularrating();
-    
+
     @Override
     public String toString() {
-        return "Nombre= " + nombre + " Edad= " + edad + "Nacionalidad= " + nacionalidad + "Pie habil= " + piehabil + "Rating= " + rating + "Equipo=" + equipo + "Agarre=" + agarre + "Lanzamiento= " + lanzamiento + "Fisico= " + fisico + "Ritmo=" + ritmo + "Entrada=" + entrada + "Vision= " + vision + "Passing= " + passing + "Regate= " + regate + "Disparo= " + disparo ;
+        return super.toString();
     }
-    
+
+    @Override
+    public void ratingAgarre() {
+         int random=(int) ((Math.random() * (5 - 1) + 1)); 
+       random*=13;
+       this.agarre=random;
+    }
+
+    @Override
+    public void ratingLanzamiento() {
+       int random=(int) ((Math.random() * (5 - 1) + 1)); 
+       random*=13;
+       this.lanzamiento=random;
+    }
+
+    @Override
+    public void ratingPassing() {
+       int random=(int) ((Math.random() * (5 - 1) + 1)); 
+       random*=13;
+       this.passing=random;
+    }
+
+    @Override
+    public void ratingFisico() {
+      int random=0;
+        while (random<70||random>100) {            
+        random=(int) ((Math.random() * (12 - 1) + 1));
+        random*=12;
+        }
+             
+     
+     this.fisico=random;
+    }
+
+    @Override
+    public void ratingRitmo() {
+        int random=0;
+        while (random<70||random>100) {            
+        random=(int) ((Math.random() * (12 - 1) + 1));
+        random*=12;
+        }
+             
+     
+     this.ritmo=random;
+    }
+
+    @Override
+    public void ratingEntrada() {
+    int random=0;
+        while (random<70||random>100) {            
+        random=(int) ((Math.random() * (12 - 1) + 1));
+        random*=12;
+        }
+             
+     
+     this.entrada=random;
+    }
+
+    @Override
+    public void ratingVision() {
+        int random=(int) ((Math.random() * (5 - 1) + 1)); 
+       random*=13;
+       this.vision=random;
+    }
+
+    @Override
+    public void ratingRegate() {
+      int random=(int) ((Math.random() * (5 - 1) + 1)); 
+       random*=13;
+       this.regate=random;
+    }
+
+    @Override
+    public void ratingDisparo() {
+    int random=(int) ((Math.random() * (5 - 1) + 1)); 
+       random*=13;
+       this.disparo=random;
+    }
+
+    @Override
+    public void Calcularrating() {
+        this.rating=this.agarre+this.lanzamiento+this.fisico+this.ritmo+this.entrada+this.vision+this.passing+this.regate+this.disparo/9;
+    }
+  
 }
