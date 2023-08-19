@@ -25,6 +25,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
         modelo.addElement("Defensa");
         modelo.addElement("Portero");
         cb_posicion.setModel(modelo);
+        
         DefaultComboBoxModel equipo = (DefaultComboBoxModel) cb_equipos.getModel();
     }
 
@@ -119,11 +120,13 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
-        eliminarestadio = new javax.swing.JComboBox<>();
+        cb_eliminarestadio = new javax.swing.JComboBox<>();
+        jButton8 = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         eliminarequipo = new javax.swing.JComboBox<>();
+        jButton7 = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -808,7 +811,24 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
             }
         });
 
-        eliminarestadio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cb_eliminarestadio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cb_eliminarestadio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cb_eliminarestadioMouseClicked(evt);
+            }
+        });
+
+        jButton8.setText("Toque Boton");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -816,7 +836,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(eliminarestadio, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_eliminarestadio, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel10Layout.createSequentialGroup()
                             .addGap(270, 270, 270)
@@ -824,7 +844,9 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                         .addGroup(jPanel10Layout.createSequentialGroup()
                             .addGap(252, 252, 252)
                             .addComponent(jButton5))))
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addComponent(jButton8)
+                .addGap(82, 82, 82))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -832,7 +854,9 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jLabel32)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addComponent(eliminarestadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_eliminarestadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton8))
                 .addGap(29, 29, 29)
                 .addComponent(jButton5)
                 .addGap(116, 116, 116))
@@ -862,28 +886,47 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setText("TOQUE EL BOTON ");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(204, 204, 204)
+                .addComponent(eliminarequipo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap(223, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton6)
                     .addComponent(jLabel34))
                 .addGap(294, 294, 294))
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(204, 204, 204)
-                .addComponent(eliminarequipo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jLabel34)
-                .addGap(58, 58, 58)
-                .addComponent(eliminarequipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(eliminarequipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(30, 30, 30)
                 .addComponent(jButton6)
                 .addContainerGap(91, Short.MAX_VALUE))
@@ -964,45 +1007,44 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     private void btn_agregarjgdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_agregarjgdMouseClicked
         String posicion = (String) cb_posicion.getSelectedItem();
         if (posicion.equalsIgnoreCase("delantero")) {
-            Equipo e= new Equipo();
-             e=(Equipo)cb_equipoagregarjgd.getSelectedItem();
-            if (e.plantilla.size()<4) {
-                jugadores.add(new Delantero(nombre.getText(), Integer.parseInt(edad.getText()), "delantero", piehabil.getText(),(Equipo)cb_equipoagregarjgd.getSelectedItem()));
+            Equipo e = new Equipo();
+            e = (Equipo) cb_equipoagregarjgd.getSelectedItem();
+            if (e.plantilla.size() < 4) {
+                jugadores.add(new Delantero(nombre.getText(), Integer.parseInt(edad.getText()), "delantero", piehabil.getText(), (Equipo) cb_equipoagregarjgd.getSelectedItem()));
                 for (int i = 0; i < equipos.size(); i++) {
-                    if (((Equipo)cb_equipoagregarjgd.getSelectedItem()).getNombre().equalsIgnoreCase(equipos.get(i).getNombre())) {
-                        equipos.get(i).agregardelantero((Delantero)jugadores.get(jugadores.size()-1));
+                    if (((Equipo) cb_equipoagregarjgd.getSelectedItem()).getNombre().equalsIgnoreCase(equipos.get(i).getNombre())) {
+                        equipos.get(i).agregardelantero((Delantero) jugadores.get(jugadores.size() - 1));
                     }
                 }
-            }else{
-            JOptionPane.showMessageDialog(this, "no se pueden agregar mas");
+            } else {
+                JOptionPane.showMessageDialog(this, "no se pueden agregar mas");
             }
-            
+
         } else if (posicion.equalsIgnoreCase("mediocampista")) {
-            Equipo e= new Equipo();
-             e=(Equipo)cb_equipoagregarjgd.getSelectedItem();
-            if (e.plantilla.size()!=4) {
-                 jugadores.add(new Mediocampista(nombre.getText(), Integer.parseInt(edad.getText()), "mediocampista", piehabil.getText(),(Equipo)cb_equipoagregarjgd.getSelectedItem()));
-            }else{
-            JOptionPane.showMessageDialog(this, "no se pueden agregar mas");
+            Equipo e = new Equipo();
+            e = (Equipo) cb_equipoagregarjgd.getSelectedItem();
+            if (e.plantilla.size() != 4) {
+                jugadores.add(new Mediocampista(nombre.getText(), Integer.parseInt(edad.getText()), "mediocampista", piehabil.getText(), (Equipo) cb_equipoagregarjgd.getSelectedItem()));
+            } else {
+                JOptionPane.showMessageDialog(this, "no se pueden agregar mas");
             }
-           
+
         } else if (posicion.equalsIgnoreCase("defensa")) {
-            Equipo e=(Equipo)cb_equipoagregarjgd.getSelectedItem();
-            if (e.plantilla.size()!=4) {
-                jugadores.add(new Defensa(nombre.getText(), Integer.parseInt(edad.getText()), "defensa", piehabil.getText(),(Equipo)cb_equipoagregarjgd.getSelectedItem()));
-            }else{
-            JOptionPane.showMessageDialog(this, "no se pueden agregar mas");
+            Equipo e = (Equipo) cb_equipoagregarjgd.getSelectedItem();
+            if (e.plantilla.size() != 4) {
+                jugadores.add(new Defensa(nombre.getText(), Integer.parseInt(edad.getText()), "defensa", piehabil.getText(), (Equipo) cb_equipoagregarjgd.getSelectedItem()));
+            } else {
+                JOptionPane.showMessageDialog(this, "no se pueden agregar mas");
             }
-           
+
         } else if (posicion.equalsIgnoreCase("portero")) {
-              Equipo e=(Equipo)cb_equipoagregarjgd.getSelectedItem();
-            if (e.plantilla.size()!=4) {
-               jugadores.add(new Portero(nombre.getText(), Integer.parseInt(edad.getText()), "defensa", piehabil.getText(),(Equipo)cb_equipoagregarjgd.getSelectedItem()));
-            }else{
-            JOptionPane.showMessageDialog(this, "no se pueden agregar mas");
+            Equipo e = (Equipo) cb_equipoagregarjgd.getSelectedItem();
+            if (e.plantilla.size() != 4) {
+                jugadores.add(new Portero(nombre.getText(), Integer.parseInt(edad.getText()), "defensa", piehabil.getText(), (Equipo) cb_equipoagregarjgd.getSelectedItem()));
+            } else {
+                JOptionPane.showMessageDialog(this, "no se pueden agregar mas");
             }
-           
-           
+
         }
         nombre.setText("");
         edad.setText("");
@@ -1020,13 +1062,12 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
 
 
     private void btn_agregarestadioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_agregarestadioMouseClicked
-       
 
-            Equipo x = new Equipo();
+        Equipo x = new Equipo();
 
-            x = (Equipo) cb_equipos.getSelectedItem();
-            estadios.add(new Estadio(nombre_estadio.getText(), ciudad_estadio.getText(), Integer.parseInt(capacidad_estadio.getText()), x));
-        
+        x = (Equipo) cb_equipos.getSelectedItem();
+        estadios.add(new Estadio(nombre_estadio.getText(), ciudad_estadio.getText(), Integer.parseInt(capacidad_estadio.getText()), x));
+
         nombre_estadio.setText("");
         ciudad_estadio.setText("");
         capacidad_estadio.setText("");
@@ -1036,84 +1077,73 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
 
         if (tab.getSelectedIndex() == 1 && equipos.size() == 0) {
             JOptionPane.showMessageDialog(this, "No ha añadido equipos,agregaria el estadio sin equipo");
-            
+
         } else if (tab.getSelectedIndex() == 2 && jugadores.size() == 0) {
-           
-           
-        }else if(tab.getSelectedIndex() == 3 && jugadores.size() == 0){
-        JOptionPane.showMessageDialog(this, "No ha añadido jugadores no puede modificar");
-        
-        
-        }else if(tab.getSelectedIndex() == 0 && equipos.size()>0){
-        DefaultComboBoxModel e= (DefaultComboBoxModel)cb_equipoagregarjgd.getModel();
+
+        } else if (tab.getSelectedIndex() == 3 && jugadores.size() == 0) {
+            JOptionPane.showMessageDialog(this, "No ha añadido jugadores no puede modificar");
+
+        } else if (tab.getSelectedIndex() == 0 && equipos.size() > 0) {
+            DefaultComboBoxModel e = (DefaultComboBoxModel) cb_equipoagregarjgd.getModel();
             for (int i = 0; i < equipos.size(); i++) {
                 e.addElement(equipos.get(i));
             }
-           cb_equipoagregarjgd.setModel(e);
-           
-        
+            cb_equipoagregarjgd.setModel(e);
+
         }
-        if (tab.getSelectedIndex()==5) {
-            DefaultComboBoxModel c=(DefaultComboBoxModel)cb_equiposmodificar.getModel();
+        if (tab.getSelectedIndex() == 5) {
+            DefaultComboBoxModel c = (DefaultComboBoxModel) cb_equiposmodificar.getModel();
             for (int i = 0; i < equipos.size(); i++) {
                 c.addElement(equipos.get(i));
             }
             cb_equiposmodificar.setModel(c);
         }
-        if (tab.getSelectedIndex() == 1&& equipos.size() > 0) {
+        if (tab.getSelectedIndex() == 1 && equipos.size() > 0) {
             DefaultComboBoxModel equipo = (DefaultComboBoxModel) cb_equipos.getModel();
             for (int i = 0; i < equipos.size(); i++) {
                 equipo.addElement(equipos.get(i));
             }
             cb_equipos.setModel(equipo);
-        }else if(tab.getSelectedIndex() == 2&& jugadores.size() > 0){
-         
-        
-        }else if(tab.getSelectedIndex() == 3&& jugadores.size() > 0){
-            DefaultComboBoxModel modificar= (DefaultComboBoxModel) cb_modificarjgd.getModel();
-        for (int i = 0; i < jugadores.size(); i++) {
-            modificar.addElement(jugadores.get(i));
-        }
-       cb_modificarjgd.setModel(modificar);
-       DefaultComboBoxModel posicion= (DefaultComboBoxModel)cb_posicionmodificar.getModel();
-       posicion.addElement("Delantero");
-       posicion.addElement("Mediocampista");
-       posicion.addElement("Defensa");
-       posicion.addElement("Portero");
-       cb_posicionmodificar.setModel(posicion);
-        }
-        if (tab.getSelectedIndex()==7) {
-            String salida="";
+        } else if (tab.getSelectedIndex() == 2 && jugadores.size() > 0) {
+
+        } else if (tab.getSelectedIndex() == 3 && jugadores.size() > 0) {
+            DefaultComboBoxModel modificar = (DefaultComboBoxModel) cb_modificarjgd.getModel();
             for (int i = 0; i < jugadores.size(); i++) {
-                salida+="Jugador :"+jugadores.get(i).nombre+" Posicion :"+jugadores.get(i).nacionalidad+"\n\n";
+                modificar.addElement(jugadores.get(i));
+            }
+            cb_modificarjgd.setModel(modificar);
+            DefaultComboBoxModel posicion = (DefaultComboBoxModel) cb_posicionmodificar.getModel();
+            posicion.addElement("Delantero");
+            posicion.addElement("Mediocampista");
+            posicion.addElement("Defensa");
+            posicion.addElement("Portero");
+            cb_posicionmodificar.setModel(posicion);
+        }
+        if (tab.getSelectedIndex() == 7) {
+            String salida = "";
+            for (int i = 0; i < jugadores.size(); i++) {
+                salida += "Jugador :" + jugadores.get(i).nombre + " Posicion :" + jugadores.get(i).nacionalidad + "\n\n";
             }
             aux_txt.setText(salida);
         }
-        if (tab.getSelectedIndex()==8) {
-           DefaultComboBoxModel c= (DefaultComboBoxModel)cb_eliminar.getModel();
+        if (tab.getSelectedIndex() == 9) {
+            DefaultComboBoxModel eliminar = (DefaultComboBoxModel) cb_eliminar.getModel();
             for (int i = 0; i < jugadores.size(); i++) {
-                c.addElement(jugadores.get(i));
+                eliminar.addElement(jugadores.get(i));
             }
-            cb_eliminar.setModel(c);
-           
-         if (tab.getSelectedIndex()==9) {
-         DefaultComboBoxModel p= (DefaultComboBoxModel)eliminarestadio.getModel();
-            for (int i = 0; i < estadios.size(); i++) {
-                p.addElement(estadios.get(i));
-            }
-            eliminarestadio.setModel(p);
-           
+            cb_eliminar.setModel(eliminar);
+
         }
-         if (tab.getSelectedIndex()==10) {
-            DefaultComboBoxModel h= (DefaultComboBoxModel)eliminarequipo.getModel();
+
+        if (tab.getSelectedIndex() == 11) {
+            DefaultComboBoxModel h = (DefaultComboBoxModel) eliminarequipo.getModel();
             for (int i = 0; i < equipos.size(); i++) {
                 h.addElement(equipos.get(i));
             }
             eliminarequipo.setModel(h);
-           
+
         }
-        }
-         
+
     }//GEN-LAST:event_tabStateChanged
 
     private void capacidad_estadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capacidad_estadioActionPerformed
@@ -1125,16 +1155,12 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     }//GEN-LAST:event_pais_equipoActionPerformed
 
     private void bt_agregarequipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarequipoMouseClicked
-        
-        
 
-        
-        
-            equipos.add(new Equipo(nombre_equipo.getText(), pais_equipo.getText()));
-            nombre_equipo.setText("");
-            pais_equipo.setText("");
+        equipos.add(new Equipo(nombre_equipo.getText(), pais_equipo.getText()));
+        nombre_equipo.setText("");
+        pais_equipo.setText("");
 
-        
+
     }//GEN-LAST:event_bt_agregarequipoMouseClicked
 
     private void edad_modifcajgdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edad_modifcajgdActionPerformed
@@ -1147,61 +1173,61 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
 
     private void btn_modifcarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modifcarMouseClicked
         if (cb_modificarjgd.getSelectedItem() instanceof Delantero) {
-            Delantero dc= new Delantero();
-            dc=(Delantero)cb_modificarjgd.getSelectedItem();
+            Delantero dc = new Delantero();
+            dc = (Delantero) cb_modificarjgd.getSelectedItem();
             for (int i = 0; i < jugadores.size(); i++) {
                 if (dc.nombre.equalsIgnoreCase(jugadores.get(i).getNombre())) {
                     jugadores.get(i).setNombre(nombre_modificar.getText());
                     jugadores.get(i).setEdad(Integer.parseInt(edad_modifcajgd.getText()));
                     jugadores.get(i).setNacionalidad(nacionalidad_modificarjgd.getText());
-                    jugadores.get(i).setPosicion((String)cb_posicionmodificar.getSelectedItem());
-                    
+                    jugadores.get(i).setPosicion((String) cb_posicionmodificar.getSelectedItem());
+
                 }
             }
-            
-        }else if(cb_modificarjgd.getSelectedItem() instanceof Mediocampista){
-        Mediocampista mc= new Mediocampista();
-            mc=(Mediocampista)cb_modificarjgd.getSelectedItem();
+
+        } else if (cb_modificarjgd.getSelectedItem() instanceof Mediocampista) {
+            Mediocampista mc = new Mediocampista();
+            mc = (Mediocampista) cb_modificarjgd.getSelectedItem();
             for (int i = 0; i < jugadores.size(); i++) {
                 if (mc.nombre.equalsIgnoreCase(jugadores.get(i).getNombre())) {
                     jugadores.get(i).setNombre(nombre_modificar.getText());
                     jugadores.get(i).setEdad(Integer.parseInt(edad_modifcajgd.getText()));
                     jugadores.get(i).setNacionalidad(nacionalidad_modificarjgd.getText());
-                    jugadores.get(i).setPosicion((String)cb_posicionmodificar.getSelectedItem());
-                    
+                    jugadores.get(i).setPosicion((String) cb_posicionmodificar.getSelectedItem());
+
                 }
             }
-        
-        }else if(cb_modificarjgd.getSelectedItem() instanceof Defensa){
-        Defensa df= new Defensa();
-            df=(Defensa)cb_modificarjgd.getSelectedItem();
+
+        } else if (cb_modificarjgd.getSelectedItem() instanceof Defensa) {
+            Defensa df = new Defensa();
+            df = (Defensa) cb_modificarjgd.getSelectedItem();
             for (int i = 0; i < jugadores.size(); i++) {
                 if (df.nombre.equalsIgnoreCase(jugadores.get(i).getNombre())) {
                     jugadores.get(i).setNombre(nombre_modificar.getText());
                     jugadores.get(i).setEdad(Integer.parseInt(edad_modifcajgd.getText()));
                     jugadores.get(i).setNacionalidad(nacionalidad_modificarjgd.getText());
-                    jugadores.get(i).setPosicion((String)cb_posicionmodificar.getSelectedItem());
-                    
+                    jugadores.get(i).setPosicion((String) cb_posicionmodificar.getSelectedItem());
+
                 }
             }
-        
-        }else if(cb_modificarjgd.getSelectedItem() instanceof Portero){
-        Portero pt= new Portero();
-            pt=(Portero)cb_modificarjgd.getSelectedItem();
+
+        } else if (cb_modificarjgd.getSelectedItem() instanceof Portero) {
+            Portero pt = new Portero();
+            pt = (Portero) cb_modificarjgd.getSelectedItem();
             for (int i = 0; i < jugadores.size(); i++) {
                 if (pt.nombre.equalsIgnoreCase(jugadores.get(i).getNombre())) {
                     jugadores.get(i).setNombre(nombre_modificar.getText());
                     jugadores.get(i).setEdad(Integer.parseInt(edad_modifcajgd.getText()));
                     jugadores.get(i).setNacionalidad(nacionalidad_modificarjgd.getText());
-                    jugadores.get(i).setPosicion((String)cb_posicionmodificar.getSelectedItem());
-                    
+                    jugadores.get(i).setPosicion((String) cb_posicionmodificar.getSelectedItem());
+
                 }
             }
-        
+
         }
-       nombre_modificar.setText("");
-       nacionalidad.setText("");
-       edad.setText("");
+        nombre_modificar.setText("");
+        nacionalidad.setText("");
+        edad.setText("");
     }//GEN-LAST:event_btn_modifcarMouseClicked
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -1213,14 +1239,14 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        Equipo e=(Equipo)cb_equiposmodificar.getSelectedItem();
+        Equipo e = (Equipo) cb_equiposmodificar.getSelectedItem();
         for (int i = 0; i < equipos.size(); i++) {
             if (e.getNombre().equalsIgnoreCase(equipos.get(i).nombre)) {
                 equipos.get(i).setNombre(nombreequipomodificar.getText());
                 equipos.get(i).setPais(paisequipomodificar.getText());
             }
         }
-        
+
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -1228,9 +1254,9 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        String salida="";
-        for (int i = 0; i <equipos.size(); i++) {
-            salida+="Posicion "+i+"\nNombre de equipo: "+equipos.get(i).nombre+"\nPais de equipo :"+equipos.get(i).pais+"\n\n";
+        String salida = "";
+        for (int i = 0; i < equipos.size(); i++) {
+            salida += "Posicion " + i + "\nNombre de equipo: " + equipos.get(i).nombre + "\nPais de equipo :" + equipos.get(i).pais + "\n\n";
         }
         listajugador.setText(salida);
     }//GEN-LAST:event_jButton3MouseClicked
@@ -1244,44 +1270,44 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     }//GEN-LAST:event_cb_eliminarActionPerformed
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        if (cb_eliminar.getSelectedItem() instanceof  Delantero) {
-            Delantero d=(Delantero)cb_eliminar.getSelectedItem();
+        if (cb_eliminar.getSelectedItem() instanceof Delantero) {
+            Delantero d = (Delantero) cb_eliminar.getSelectedItem();
             for (int i = 0; i < jugadores.size(); i++) {
                 if (d.nombre.equalsIgnoreCase(jugadores.get(i).nombre)) {
                     jugadores.remove(i);
                 }
             }
-        }else if(cb_eliminar.getSelectedItem() instanceof  Mediocampista){
-        Mediocampista d=(Mediocampista)cb_eliminar.getSelectedItem();
+        } else if (cb_eliminar.getSelectedItem() instanceof Mediocampista) {
+            Mediocampista d = (Mediocampista) cb_eliminar.getSelectedItem();
             for (int i = 0; i < jugadores.size(); i++) {
                 if (d.nombre.equalsIgnoreCase(jugadores.get(i).nombre)) {
                     jugadores.remove(i);
                 }
             }
-        
-        }else if(cb_eliminar.getSelectedItem() instanceof  Defensa){
-        Defensa d=(Defensa)cb_eliminar.getSelectedItem();
+
+        } else if (cb_eliminar.getSelectedItem() instanceof Defensa) {
+            Defensa d = (Defensa) cb_eliminar.getSelectedItem();
             for (int i = 0; i < jugadores.size(); i++) {
                 if (d.nombre.equalsIgnoreCase(jugadores.get(i).nombre)) {
                     jugadores.remove(i);
                 }
             }
-        
-        }else if(cb_eliminar.getSelectedItem() instanceof  Portero){
-        
-          Portero d=(Portero)cb_eliminar.getSelectedItem();
+
+        } else if (cb_eliminar.getSelectedItem() instanceof Portero) {
+
+            Portero d = (Portero) cb_eliminar.getSelectedItem();
             for (int i = 0; i < jugadores.size(); i++) {
                 if (d.nombre.equalsIgnoreCase(jugadores.get(i).nombre)) {
                     jugadores.remove(i);
                 }
             }
-        
+
         }
-        
+
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        Estadio e= (Estadio)eliminarestadio.getSelectedItem();
+        Estadio e = (Estadio) cb_eliminarestadio.getSelectedItem();
         for (int i = 0; i < estadios.size(); i++) {
             if (e.nombre.equalsIgnoreCase(estadios.get(i).nombre)) {
                 estadios.remove(i);
@@ -1299,24 +1325,63 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     }//GEN-LAST:event_eliminarequipoActionPerformed
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        Equipo e= new Equipo();
-        e=(Equipo)eliminarequipo.getSelectedItem();
+        Equipo e = new Equipo();
+        e = (Equipo) eliminarequipo.getSelectedItem();
         for (int i = 0; i < equipos.size(); i++) {
             if (e.nombre.equalsIgnoreCase(equipos.get(i).nombre)) {
                 equipos.remove(i);
             }
         }
-        
-        
+
+
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jToggleButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton1MouseClicked
-        String salida="";
+        String salida = "";
         for (int i = 0; i < estadios.size(); i++) {
-            salida+="Nombre"+estadios.get(i).nombre+"  Equipo dueño "+estadios.get(i).equipo+"\n\n";
+            salida += "Nombre" + estadios.get(i).nombre + "  Equipo dueño " + estadios.get(i).equipo + "\n\n";
         }
         listarestadio.setText(salida);
     }//GEN-LAST:event_jToggleButton1MouseClicked
+
+    private void cb_eliminarestadioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb_eliminarestadioMouseClicked
+        DefaultComboBoxModel modelo = ((DefaultComboBoxModel) cb_eliminarestadio.getModel());
+
+        for (Estadio estadio : estadios) {
+
+            modelo.addElement(estadio.getNombre());
+        }
+
+    }//GEN-LAST:event_cb_eliminarestadioMouseClicked
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+DefaultComboBoxModel equipo = (DefaultComboBoxModel) cb_equipos.getModel();        
+        for (int i = 0; i < equipos.size(); i++) {
+       equipo.addElement(equipos.get(i));
+        }
+        
+        eliminarequipo.setModel(equipo);
+       
+       
+        
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        
+        DefaultComboBoxModel equipo = (DefaultComboBoxModel) cb_eliminarestadio.getModel();        
+        for (int i = 0; i < estadios.size(); i++) {
+            equipo.addElement(estadios.get(i));
+        }
+        cb_eliminarestadio.setModel(equipo);
+    }//GEN-LAST:event_jButton8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1348,10 +1413,10 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               Examen1P2_CarlosMoncada ex= new Examen1P2_CarlosMoncada();
-               ex.setLocationRelativeTo(null);
-               ex.setVisible(true);
-               
+                Examen1P2_CarlosMoncada ex = new Examen1P2_CarlosMoncada();
+                ex.setLocationRelativeTo(null);
+                ex.setVisible(true);
+
             }
         });
     }
@@ -1364,6 +1429,7 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     private javax.swing.JButton btn_modifcar;
     private javax.swing.JFormattedTextField capacidad_estadio;
     private javax.swing.JComboBox<String> cb_eliminar;
+    private javax.swing.JComboBox<String> cb_eliminarestadio;
     private javax.swing.JComboBox<String> cb_equipoagregarjgd;
     private javax.swing.JComboBox<String> cb_equipos;
     private javax.swing.JComboBox<String> cb_equiposmodificar;
@@ -1375,13 +1441,14 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
     private javax.swing.JTextField edad;
     private javax.swing.JTextField edad_modifcajgd;
     private javax.swing.JComboBox<String> eliminarequipo;
-    private javax.swing.JComboBox<String> eliminarestadio;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
