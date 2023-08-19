@@ -110,7 +110,7 @@ public class Delantero extends Jugador {
 
     @Override
     public String toString() {
-        return super.toString();
+        return this.nombre;
     }
 
 }

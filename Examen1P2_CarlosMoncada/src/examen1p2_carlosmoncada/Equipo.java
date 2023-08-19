@@ -27,6 +27,20 @@ ArrayList<Jugador> plantilla= new ArrayList<>();
     plantilla.add(j);
     
     }
+    public void agregarmediocampista(Mediocampista j){
+    plantilla.add(j);
+    
+    }
+    public void agregardefensa(Defensa d){
+    plantilla.add(d);
+    
+    }
+    public void agregarportero(Portero d){
+    plantilla.add(d);
+    
+    }
+    
+    
 
     public String getNombre() {
         return nombre;

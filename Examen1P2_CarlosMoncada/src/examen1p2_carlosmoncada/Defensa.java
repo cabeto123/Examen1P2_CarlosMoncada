@@ -228,5 +228,6 @@ public class Defensa extends  Jugador{
     public void Calcularrating() {
         this.rating=this.agarre+this.lanzamiento+this.fisico+this.ritmo+this.entrada+this.vision+this.passing+this.regate+this.disparo/9;
     }
+
   
 }
