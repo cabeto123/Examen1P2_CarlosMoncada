@@ -1153,7 +1153,13 @@ public class Examen1P2_CarlosMoncada extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "No ha añadido equipos,agregaria el estadio sin equipo");
 
         } else if (tab.getSelectedIndex() == 2 && jugadores.size() == 0) {
-
+            
+             DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_equipos.getModel();
+            for (int i = 0; i < equipos.size(); i++) {
+                modelo.addElement(equipos.get(i));
+                
+            }
+            cb_equipos.setModel(modelo);
         } else if (tab.getSelectedIndex() == 3 && jugadores.size() == 0) {
             JOptionPane.showMessageDialog(this, "No ha añadido jugadores no puede modificar");
 
